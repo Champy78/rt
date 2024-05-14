@@ -2,18 +2,6 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_username = $_POST["new_username"];
     $new_password = $_POST["new_password"];
-
-    // Adiciona o novo usuário ao arquivo de usuários
-    $file = fopen("users.txt", "a");
-    fwrite($file, $new_username . ":" . $new_password . "\n");
-    fclose($file);
-
-    // Redireciona o usuário para a página de login após o registro bem-sucedido
-    header("Location: index.html");
-    exit();
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["user_name"];
     $email = $_POST["email"];
     $senha = $_POST["password"];
@@ -48,6 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: login.html");
     exit();
 }
-
-
 ?>
+
