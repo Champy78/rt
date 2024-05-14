@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($file);
 
     // Redireciona o usuário para a página de login após o registro bem-sucedido
-    header("Location: login.html");
+    header("Location: home.html");
     exit();
 }
 ?>
