@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+	background-color:#ccffe6;
+	font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#topo {
+    background-color: #f9f9f9;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+	 z-index: 1000;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+	
+}
+
+#menu img {
+	width: 100px; 
+    height: auto;
+    margin-right: 10px;
+	margin-right: 10px;
+    padding-right: 10px;
+	opacity: 0.5; 
+	filter: grayscale(0%) sepia(10%) saturate(2000%) hue-rotate(2000deg);
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 120px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+#box {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#box div {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#box form {
+    display: flex;
+    flex-direction: column;
+}
+
+#box label {
+    margin-bottom: 5px;
+}
+
+#box input[type="text"],
+#box input[type="email"],
+#box input[type="password"],
+#box input[type="date"],
+#box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#box input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#box input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#box a {
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+
+#box a:hover {
+    color: #333;
+}
+
+.container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+			position: absolute;
+			top: 65%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+        }
+
+.container2 {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+			position: absolute;
+			top: 75%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+        }
+		
+.container3 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 90%;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f9f9f9;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+}
+
+        h1, h2 {
+            color: #333;
+        }
+p {
+            color: #666;
+            line-height: 1.6;
+        }
+		
+ul {
+            list-style-type: none;
+            padding: 0;
+    }
+
+li {
+         margin-bottom: 10px;
+   }
+   
+.social-link {
+            color: #007bff; /* Cor azul padrão do Instagram */
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            text-decoration: underline;
+        }
+.faq-question {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .faq-answer {
+            margin-left: 20px;
+        }
+@media screen and (max-width: 600px) {
+    #box {
+        padding: 10px;
+    }
+}

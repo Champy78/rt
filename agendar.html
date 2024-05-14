@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+    <title>Agendar Consulta Médica</title>
+</head>
+<body>
+
+<div id="topo">
+    <div id="menu">
+        <img src="imagens/imagem1.jpg">
+        <a href="index.html">Clínica O Sheik</a>
+        <a href="quem_somos.html">Quem Somos</a>
+        <a href="especialidade.html">Especialidade</a>
+        <a href="contato.html">Contato</a>
+        <a href="ajuda.html">Ajuda</a>
+    </div>
+ </div>
+ <div class="container">
+<h2>Agendar Consulta Médica</h2>
+
+
+    <label for="data">Data da Consulta:</label><br>
+    <input type="date" id="data" name="data" required><br><br>
+    
+    <label for="horario">Horário da Consulta:</label><br>
+    <input type="time" id="horario" name="horario" required><br><br>
+
+    <label for="especialidade">Especialidade:</label><br>
+    <select id="especialidade" name="especialidade" required>
+        <option value="Cardiologia">Cardiologia</option>
+        <option value="Dermatologia">Dermatologia</option>
+        <option value="Pediatria">Pediatria</option>
+    </select><br><br>
+    
+    <label for="obs">Observações:</label><br>
+    <textarea id="obs" name="obs" rows="4" cols="50" required></textarea><br><br>
+    
+    <input type="submit" value="Agendar Consulta">
+
+ </div>
+</body>
+</html>

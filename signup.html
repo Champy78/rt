@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastro</title>
+</head>
+<body>
+<div id="topo">
+        <div id="menu">
+            <img src="imagens/imagem1.jpg">
+            <a href="index.html">Clínica O Sheik</a>
+            <a href="quem_somos.html">Quem Somos</a>
+            <a href="especialidade.html">Especialidade</a>
+            <a href="contato.html">Contato</a>
+            <a href="ajuda.html">Ajuda</a>
+            
+        </div>
+    </div>
+   <div class="container">
+        
+        
+            <div>Cadastro</div>
+
+            <form action="register.php" method="post">
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input id="nome" type="text" name="user_name" placeholder="Digite seu nome..." required autofocus />
+                </p>
+                <p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" placeholder="Digite seu email..." required />
+                </p>
+                <p>
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" name="password" placeholder="Digite sua senha..." required />
+                </p>
+                <p>
+                    <label for="confirmarSenha">Confirmar Senha:</label>
+                    <input id="confirmarSenha" type="password" name="confirmarSenha" placeholder="Confirme sua senha..." required />
+                </p>
+                <!-- Adicione aqui os outros campos do formulário -->
+                <input type="submit" value="Cadastrar"><br><br>
+            </form>
+
+            <a href="login.html">Já possui uma conta? Faça login aqui</a><br><br>
+        
+    </div>
+</body>
+</html>
