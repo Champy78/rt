@@ -1,40 +1,34 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $new_username = $_POST["new_username"];
-    $new_password = $_POST["new_password"];
-    $nome = $_POST["user_name"];
-    $email = $_POST["email"];
-    $senha = $_POST["password"];
-    $confirmarSenha = $_POST["confirmarSenha"];
-    $cep = $_POST["cep"];
-    $estado = $_POST["estado"];
-    $municipio = $_POST["municipio"];
-    $logradouro = $_POST["logradouro"];
-    $numero = $_POST["numero"];
-    $bairro = $_POST["bairro"];
-    $telefone = $_POST["telefone"];
-    $data_nascimento = $_POST["data_nascimento"];
-    $sexo = $_POST["sexo"];
+    // Obter os dados do formulário
+    $user_data = array(
+        "nome" => $_POST["user_name"],
+        "email" => $_POST["email"],
+        "senha" => $_POST["password"],
+        "confirmar_senha" => $_POST["confirmarSenha"],
+        // Adicione aqui os outros campos do formulário
+    );
 
     // Validação básica dos campos (pode ser expandida conforme necessário)
-    if (empty($nome) || empty($email) || empty($senha) || empty($confirmarSenha)) {
+    if (empty($user_data['nome']) || empty($user_data['email']) || empty($user_data['senha']) || empty($user_data['confirmar_senha'])) {
         echo "Todos os campos são obrigatórios.";
         exit();
     }
 
-    if ($senha !== $confirmarSenha) {
+    if ($user_data['senha'] !== $user_data['confirmar_senha']) {
         echo "As senhas não coincidem.";
         exit();
     }
 
-    // Adiciona os dados do usuário ao arquivo de usuários
-    $file = fopen("users.txt", "a");
-    fwrite($file, "$nome:$email:$senha:$cep:$estado:$municipio:$logradouro:$numero:$bairro:$telefone:$data_nascimento:$sexo\n");
+    // Armazenar os dados do usuário em um arquivo CSV
+    $file = fopen("users.csv", "a");
+    fputcsv($file, $user_data);
     fclose($file);
 
-    // Redireciona o usuário para a página de login após o registro bem-sucedido
-    header("Location: home.html");
+    // Redirecionar o usuário para a página de login após o registro bem-sucedido
+    header("Location: login.html");
     exit();
 }
 ?>
+
 
